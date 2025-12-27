@@ -26,7 +26,7 @@ IFACE = "wlo1"                 # Network interface
 START_PORT = 32768             # Ephemeral port range start
 END_PORT = 65535               # Ephemeral port range end
 attacker_ip = "192.168.0.10"   # Attacker's private IP inside NAT
-server_ip = "4.4.4.4"          # Victim server IP
+server_ip = "4.4.4.4"          # Target server IP
 SERVER_PORT = 22               # Target server port
 nat_ip = "6.6.6.6"             # NAT public IP
 ```
