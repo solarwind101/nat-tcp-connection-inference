@@ -12,9 +12,10 @@ There are two steps to the attack:
 
 ### Dependencies
 #### Scapy (Required)
+```bash
 sudo apt update
 sudo apt install scapy
-
+```
 ## 1. Inferring Client Ports in Use
 ### Configuration
 Edit `port-infer-main.py` and fill in the configuration section:
