@@ -55,7 +55,7 @@ IFACE = "wlo1"
 
 # Please adjust based on NAT device
 WAIT_AFTER_RST = 11.0    # Time for NAT to clear mapping after RST
-WAIT_AFTER_SYN = 5.0    # Additional wait after SYN
+WAIT_AFTER_SYN = 2.0    # Additional wait after SYN
 INTER_PROBE_DELAY = 1.0  # Delay between testing different clients
 
 # TCP sequence
