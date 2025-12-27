@@ -21,7 +21,7 @@ TTL_SYNACK = 3
 SEQ_C = 1000
 SEQ_S = 2000
 attacker_ip = "192.168.0.10" # Attacker's private IP in the NATed LAN
-server_ip = " "  # the victim server IP eg. 4.4.4.4
+server_ip = " "  # the target server IP eg. 4.4.4.4
 SERVER_PORT = 22
 nat_ip = " "     # The NAT's public IP eg. 6.6.6.6
 # ----------------------------
